@@ -1,0 +1,11 @@
+pipeline{
+  agent { label 'master'}
+  stages{
+    stage("Git Clone Resource"){
+      ansiblePlaybook(
+        inventory: ansible/inventory
+        
+      )
+    }
+  }
+}
