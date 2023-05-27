@@ -3,6 +3,8 @@
   tasks:
     - name: Clone resource 
       git: 
-        repo: "https://leangsengk90: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@github.com/leangsengk90/spring-register-test.git"
+        repo: https://github.com/leangsengk90/spring-register-test.git
         dest: ./
+        username: leangsengk90
+        password: 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
         version: master
