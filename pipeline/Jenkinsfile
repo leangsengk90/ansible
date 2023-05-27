@@ -6,8 +6,7 @@ pipeline{
        
         ansiblePlaybook(
           inventory: 'inventory',
-          playbook: 'gitclone-playbook.yml',
-          credentialsId: 'github-token'
+          playbook: 'gitclone-playbook.yml'
         ) 
    
       }
