@@ -3,10 +3,10 @@
   vars:
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
     git_user: leangsengk90
-    git_pass: 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
+    git_pass: uzrjPlbFWc8l3qXOTUTM0t4f3cwcgE1Zu9HJ
   tasks:
     - name: Clone resource
       git:
-        repo: "https://{{git_user|urlencode()}}:{{git_pass|urlencode()}}@github.com/leangsengk90/spring-register-test.git"
+        repo: "https://ghp_{{git_user|urlencode()}}:{{git_pass|urlencode()}}@github.com/leangsengk90/spring-register-test.git"
         dest: "/tmp/spring"
         version: master
