@@ -1,10 +1,11 @@
 - name: Git
-  hosts: localhost
+  hosts: workers
   vars:
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
   tasks:
     - name: Clone resource
       git:
-        clone: 'https://leangsengk90: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@github.com/leangsengk90/spring-register-test.git'
-        dest: /home/$USER/spring
+        repo: 'https://github.com/leangsengk90/spring-register-test.git'
+        dest: /home/$USER/springs
         version: master
+        key_file: jenkins-private-key
