@@ -1,10 +1,5 @@
 - name: Git
   hosts: workers
-  vars_prompt:
-    - name: git_user
-      private: no
-    - name: git_pass
-      private: yes
   vars:
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
     git_user: leangsengk90
