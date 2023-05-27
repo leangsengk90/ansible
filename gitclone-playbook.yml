@@ -2,11 +2,9 @@
   hosts: workers
   vars:
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
-    username: leangsengk90
-    token: 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
   tasks:
     - name: Clone resource
       git:
-        repo: 'https://github.com/leangsengk90/seng-react-test.git'
-        dest: /home/$USER/reactjs
+        repo: 'https://github.com/leangsengk90/spring-register-test.git'
+        dest: /home/$USER/spring
         version: "master"
