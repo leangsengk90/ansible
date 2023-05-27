@@ -1,6 +1,7 @@
 - name: Git
   hosts: workers
   vars:
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
     username: leangsengk90
     token: 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
   tasks:
