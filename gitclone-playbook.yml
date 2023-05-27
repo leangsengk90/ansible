@@ -1,5 +1,5 @@
 - name: Git
-  hosts: workers
+  hosts: localhost
   vars:
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
   tasks:
