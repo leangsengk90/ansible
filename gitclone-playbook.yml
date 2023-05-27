@@ -1,5 +1,5 @@
 - name: Git
-  hosts: workers
+  hosts: localhost
   vars:
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
     git_user: leangsengk90
@@ -9,5 +9,5 @@
       git:
         repo: "https://{{git_user}}:ghp_{{git_pass}}@github.com/leangsengk90/spring-register-test.git"
         #repo: "https://{{git_user|urlencode()}}:ghp_{{git_pass|urlencode()}}@github.com/leangsengk90/spring-register-test.git"
-        dest: "/tmp/spring"
+        dest: "./register-app"
         version: master
