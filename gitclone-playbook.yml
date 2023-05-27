@@ -1,0 +1,8 @@
+- name: Git
+  hosts: localhost
+  tasks:
+    - name: Clone resource 
+      git: 
+        repo: https://github.com/leangsengk90/spring-register-test.git
+        dest: /home/$USER
+        version: master
