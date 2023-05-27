@@ -2,9 +2,10 @@
   hosts: localhost
   tasks:
     - name: Clone resource 
-      git: 
-        repo: https://github.com/leangsengk90/spring-register-test.git
+      uri: 
+        url: "https://github.com/leangsengk90/spring-register-test.git"
+        method: git
         dest: ./
-        username: leangsengk90
-        password: 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
-        version: master
+        username: "leangsengk90"
+        password: "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"
+       
