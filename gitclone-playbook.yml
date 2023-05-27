@@ -6,6 +6,6 @@
   tasks:
     - name: Clone resource
       git:
-        repo: "https://{{ username | urlencode }}:{{ token | urlencode }}@github.com/leangsengk90/spring-register-test.git HEAD:master"
+        repo: 'https://{{ token }}@github.com/leangsengk90/spring-register-test.git'
         dest: ./
         version: "master"
