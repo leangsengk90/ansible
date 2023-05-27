@@ -5,6 +5,5 @@
   tasks:
     - name: Clone resource
       git:
-        repo: 'https://github.com/leangsengk90/spring-register-test.git'
-        dest: /home/$USER/spring
-        version: "master"
+        url: 'https://github.com/leangsengk90/spring-register-test.git'
+        credentials: 'github-token'
