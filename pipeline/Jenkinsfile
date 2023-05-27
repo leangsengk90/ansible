@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage("Git Clone Resource"){
       steps{
-        /*
+       
         ansiblePlaybook(
           inventory: 'inventory',
           playbook: 'gitclone-playbook.yml',
@@ -12,8 +12,7 @@ pipeline{
               token: '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'
            ]
         ) 
-        */
-        deleteDir()
+   
       }
     }
   }
