@@ -2,10 +2,12 @@ pipeline{
   agent { label 'master'}
   stages{
     stage("Git Clone Resource"){
-      ansiblePlaybook(
-        inventory: 'inventory',
-        playbook: 'gitclone-playbook.yml'
-      )
+      steps{
+        ansiblePlaybook(
+          inventory: 'inventory',
+          playbook: 'gitclone-playbook.yml'
+        ) 
+      }
     }
   }
 }
