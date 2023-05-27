@@ -7,6 +7,7 @@
   tasks:
     - name: Clone resource
       git:
-        repo: "https://{{git_user|urlencode()}}:{{git_pass|urlencode()}}@github.com/leangsengk90/spring-register-test.git"
+        #repo: "https://{{git_user|urlencode()}}:{{git_pass|urlencode()}}@github.com/leangsengk90/spring-register-test.git"
+        repo: "https://github.com/leangsengk90/spring-register-test.git"
         dest: "/tmp/spring"
-        update: yes
+        key_file: jenkins-private-key
