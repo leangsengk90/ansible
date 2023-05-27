@@ -7,8 +7,8 @@ pipeline{
           inventory: 'inventory',
           playbook: 'gitclone-playbook.yml',
           extraVars: [
-              username: leangsengk90,
-              token: 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
+              username: 'leangsengk90',
+              token: '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'
            ]
         ) 
       }
