@@ -3,8 +3,8 @@ pipeline{
   stages{
     stage("Git Clone Resource"){
       ansiblePlaybook(
-        inventory: ansible/inventory
-        
+        inventory: 'inventory',
+        playbook: 'gitclone-playbook.yml'
       )
     }
   }
