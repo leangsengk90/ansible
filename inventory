@@ -1,0 +1,9 @@
+localhost ansible_connection=local
+
+[workers]
+node1 ansible_host=10.148.0.4 ansible_user=leangsengk90
+node2 ansible_host=10.148.0.5 ansible_user=leangsengk90
+
+[all:children]
+localhost
+workers
