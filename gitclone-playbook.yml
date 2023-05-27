@@ -3,7 +3,7 @@
   vars:
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
     git_user: leangsengk90
-    git_pass: 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
+    git_pass: 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
   tasks:
     - name: Clone resource
       git:
