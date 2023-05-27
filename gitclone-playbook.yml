@@ -7,6 +7,7 @@
   tasks:
     - name: Clone resource
       git:
-        repo: "https://{{git_user|urlencode()}}:ghp_{{git_pass|urlencode()}}@github.com/leangsengk90/spring-register-test.git"
+        repo: "https://{{git_user}}:ghp_{{git_pass}}@github.com/leangsengk90/spring-register-test.git"
+        #repo: "https://{{git_user|urlencode()}}:ghp_{{git_pass|urlencode()}}@github.com/leangsengk90/spring-register-test.git"
         dest: "/tmp/spring"
         version: master
