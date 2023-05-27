@@ -8,5 +8,5 @@
     - name: Clone resource
       git:
         repo: 'https://github.com/leangsengk90/seng-react-test.git'
-        dest: /home/$USER
+        dest: /home/$USER/reactjs
         version: "master"
