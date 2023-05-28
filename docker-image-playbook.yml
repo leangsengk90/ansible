@@ -1,2 +1,18 @@
-- name: Docker
-  hosts: all
+- name: Docker Playbook
+  hosts: localhost
+  tasks:
+    - name: Log into private registry and force re-authorization
+      docker_login:
+        registry: registry.e-crops.co
+        username: {{ registry_username }}
+        password: {{ registry_password }}
+        reauthorize: yes
+    - name: Build an image and push it to a private repo
+      docker_image:
+        build:
+          path: ./
+          dockerfile: ./Dockerfile
+        name: registry.e-crops.co/register-app
+        tag: 1.1.1
+        push: yes
+        source: build
