@@ -1,5 +1,6 @@
 - name: Docker Playbook
   hosts: localhost
+  become: yes
   tasks:
     - name: Log into private registry and force re-authorization
       docker_login:
