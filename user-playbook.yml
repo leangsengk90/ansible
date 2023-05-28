@@ -1,6 +1,8 @@
 - name: Create user
   hosts: workers
   become: true
+  vars:
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
   tasks:
    - name: Create user
      user:
