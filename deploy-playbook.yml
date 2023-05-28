@@ -6,6 +6,9 @@
      apt:
        name: docker-compose
        state: present
+       
+   - name: Make Directory
+     shell: mkdir -p /opt/register-app
 
    - name: Copy Docker Compose file
      copy:
@@ -13,6 +16,6 @@
        dest: /opt/register-app/docker-compose.yml
 
    - name: Start Docker Compose
-     command: "mkdir -p /opt/register-app; docker-compose up -d"
+     command: docker-compose up -d
      args:
        chdir: /opt/register-app
