@@ -15,7 +15,7 @@ pipeline{
         sh """
             ansible-playbook docker-image-playbook.yml \
             -i inventory \
-            -e registry_username=dara
+            -e registry_username=dara \
             -e registry_password=123
         """
       }
