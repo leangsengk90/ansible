@@ -23,10 +23,12 @@ pipeline{
 
     stage("Deploy with Compose"){
       steps{
-        ansiblePlaybook(
-          inventory: 'inventory',
-          playbook: 'deploy-playbook.yml'
-        ) 
+        sh """
+            ansible-playbook deploy-playbook.yml \
+            -i inventory \
+            -e registry_username=dara \
+            -e registry_password=123
+        """
       }
     }
 
