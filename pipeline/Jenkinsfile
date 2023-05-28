@@ -1,5 +1,8 @@
 pipeline{
   agent { label 'master'}
+  tools{
+    maven "3.6.3" 
+  }
   stages{
     stage("Git Clone Resource"){
       steps{
