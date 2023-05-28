@@ -10,7 +10,7 @@
     - name: Build an image and push it to a private repo
       docker_image:
         build:
-          path: ./
+          path: ./register-app
           dockerfile: ./Dockerfile
         name: registry.e-crops.co/register-app
         tag: 1.1.1
