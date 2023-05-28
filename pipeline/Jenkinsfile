@@ -12,6 +12,9 @@ pipeline{
 
     stage("Build Image and Push to Registry"){
       steps{
+        dir("register-app"){
+          sh "mvn clean package"
+        }
         sh """
             ansible-playbook docker-image-playbook.yml \
             -i inventory \
