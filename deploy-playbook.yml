@@ -1,5 +1,6 @@
 - name: Deploy application with Docker Compose
   hosts: workers
+  become: yes
   tasks:
    - name: Install Docker Compose
      apt:
