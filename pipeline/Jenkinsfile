@@ -1,8 +1,5 @@
 pipeline{
   agent { label 'master'}
-  tools{
-    maven "3.6.3" 
-  }
   stages{
     stage("Git Clone Resource"){
       steps{
@@ -15,16 +12,23 @@ pipeline{
 
     stage("Build Image and Push to Registry"){
       steps{
-        dir("register-app"){
-          sh "mvn clean package"
-        }
         sh """
             ansible-playbook docker-image-playbook.yml \
             -i inventory \
-            -e registry_username=dara \
+            -e registry_username=dara
             -e registry_password=123
         """
       }
     }
+
+    stage("Deploy with Compose"){
+      steps{
+        ansiblePlaybook(
+          inventory: 'inventory',
+          playbook: 'deploy-playbook.yml'
+        ) 
+      }
+    }
+
   }
 }
