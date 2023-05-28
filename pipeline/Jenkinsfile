@@ -1,6 +1,7 @@
 pipeline{
   agent { label 'master'}
   stages{
+    /*
     stage("Git Clone Resource"){
       steps{
         ansiblePlaybook(
@@ -28,6 +29,15 @@ pipeline{
             -i inventory \
             -e registry_username=dara \
             -e registry_password=123
+        """
+      }
+    }
+    */
+     stage("Deploy with Compose"){
+      steps{
+        sh """
+            ansible-playbook user-playbook.yml \
+            -i inventory
         """
       }
     }
