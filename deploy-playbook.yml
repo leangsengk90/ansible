@@ -1,0 +1,17 @@
+- name: Deploy application with Docker Compose
+  hosts: workers
+  tasks:
+   - name: Install Docker Compose
+     apt:
+       name: docker-compose
+       state: present
+
+   - name: Copy Docker Compose file
+     copy:
+       src: ./register-app/docker-compose.yml
+       dest: /opt/register-app/docker-compose.yml
+
+   - name: Start Docker Compose
+     command: docker-compose up -d
+     args:
+       chdir: /opt/register-app
